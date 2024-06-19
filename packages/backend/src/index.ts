@@ -16,6 +16,10 @@ const customers: Customer[] = [
   { id: 2, name: 'Jane Smith' }
 ];
 
+app.get('/',(req,res)=>{
+  res.json({testing : "testing reponse one two three"})
+})
+
 app.get('/api/customers', (req, res) => {
   res.json(customers);
 });
