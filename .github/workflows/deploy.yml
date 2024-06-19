@@ -23,7 +23,7 @@ jobs:
       run: npm install -g lerna@5.5.2
 
     - name: Bootstrap packages with Lerna
-      run: lerna bootstrap --hoist
+      run: lerna start
 
     - name: Build frontend
       run: |
