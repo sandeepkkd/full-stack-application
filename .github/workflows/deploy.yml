@@ -17,7 +17,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Adjust the Node.js version as per your project requirements
+        node-version: '18'  # Adjust the Node.js version as per your project requirements
 
     - name: Install Lerna
       run: npm install -g lerna
