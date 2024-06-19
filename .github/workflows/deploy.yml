@@ -17,13 +17,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'  # Adjust the Node.js version as per your project requirements
+        node-version: '14'  # Adjust the Node.js version as per your project requirements
 
     - name: Install Lerna
-      run: npm install 
+      run: npm install -g lerna
 
     - name: Bootstrap packages with Lerna
-      run: npm start
+      run: lerna bootstrap --hoist
 
     - name: Build frontend
       run: |
@@ -61,4 +61,3 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve
       working-directory: terraform
-
